@@ -61,8 +61,7 @@ def delete_student(student_id):
     students = [s for s in students if s["id"] != student_id]
     return jsonify({"status": "success", "message": "Student deleted"}), 200
 
-
-# === DASHBOARD UI (INLINE HTML/CSS/JS) === #
+# === DASHBOARD UI === #
 
 @app.route('/dashboard')
 def dashboard():
@@ -133,6 +132,7 @@ async function deleteStudent(id) {
 
 loadStudents();
 </script>
+
 </body>
 </html>
 """)
